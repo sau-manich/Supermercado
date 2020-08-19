@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hipermaxi</title>
+	<meta name="description" content="A simple content slider with depth-like zoom functionality" />
+	<meta name="keywords" content="blueprint, template, slider, zoom, javascript, depth, 3d, css" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="images/ico/icono.png">
+	<!-- Feather Icons -->
+	<link rel="stylesheet" type="text/css" href="fonts/feather/style.css">
+	<!-- General demo styles & header -->
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<!-- Component styles -->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+
+
+
+	<!-- PWA desde aqui segun el video-->
+        <!-- Para pintar de color la barra de navegador de un navegador-->
+        <meta name="theme-color" content="#222">
+        <!-- Para decirle a los navegadores que tu sitio esta optimizado para moviles y que el sitio es amigable -->
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <!-- PWA para apple-->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <!-- icono-->
+        <link rel="shortcut icon" type="image/png" href="images/ico/icono.png">
+        <!-- Pantalla de inicio-->
+        <link rel="apple-touch-icon" href="images/ico/icono.png">
+        <link rel="apple-touch-startup-image" href="images/ico/icono.png">
+        <!-- importante -->
+		<link rel="manifest" href="manifest.json">
+
+
+</head>
+<body>
+	<!-- Main container -->
+	<div class="container">
+		<!-- Blueprint header -->
+		<header class="bp-header cf">
+			<span>HIPERMAXI <span class="bp-icon bp-icon-about" data-content="Hipermaxi ahora cuenta con una aplicación para que puedas realizar tus compras de la mejor manera y asi evitar el contagio de esta pandemia."></span></span>
+			<h1>COMPRA AHORA</h1>
+			<nav>
+				<!-- <a href="index.html" class="bp-icon bp-icon-prev" data-info="VOLVER"></a> -->
+				<a href="#" class="bp-icon bp-icon-drop" data-info="Manda el enlace a tus amigos"><span>Manda el enlace a tus amigos</span></a>
+				<a href="#" class="bp-icon bp-icon-archive" data-info="Revisa tu compra"><span>Revisa tu compra</span></a>
+			</nav>
+		</header>
+		<!-- Grid -->
+		<section class="slider">
+			<div class="slide slide--current" data-content="content-1">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<!-- <img class="zoomer__image" src="https://images.vexels.com/media/users/3/205436/isolated/lists/f0303d5601bc9665847c9a23339cc64b-icono-de-trazo-de-descuento-de-compras-en-linea.png" alt="libro1"/> -->
+						<img class="zoomer__image" src="images/i2.png" alt="img1" width="400"/>
+						<div class="preview">
+							<div class="zoomer__area zoomer__area--size-2"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title"><span>HIPERCELL</span>Del Hipermaxi a tu casa <br> con Delivery</h2>
+			</div>
+			<div class="slide" data-content="content-2">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="images/i3.png" alt="img2" width="300"/>
+						<div class="preview">
+							<div class="zoomer__area zoomer__area--size-4"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title"><span>HIPER-SCANNER</span> Compra desde la camara <br> de tu celular</h2>
+			</div>
+			<nav class="slider__nav">
+				<button class="button button--nav-prev"><i class="icon icon--arrow-left"></i><span class="text-hidden">Previous product</span></button>
+				<button class="button button--zoom"><i class="icon icon--zoom"></i><span class="text-hidden">View details</span></button>
+				<button class="button button--nav-next"><i class="icon icon--arrow-right"></i><span class="text-hidden">Next product</span></button>
+			</nav>
+		</section>
+		<!-- /slider-->
+		<section class="content">
+			<div class="content__item" id="content-1">
+				<img class="content__item-img rounded-right" src="images/i2.png" alt="img1" />
+				<div class="content__item-inner">
+					<h2>HIPERCELL</h2>
+					<h3>Del Hipermaxi a tu casa</h3>
+					<p>Te mostraremos una lista de nuestros productos y podras añadir al carrito de compras
+						cualquier producto, al finalizar deberas llenar un formulario para dejarnos tus datos
+						y asi poder mandar los productos a tu domicilio.
+					</p>
+					<p align="center"><a href="#">Empezar compra &xrarr;</a></p>
+				</div>
+			</div>
+			<div class="content__item" id="content-2">
+				<img class="content__item-img rounded-right" src="images/i3.png" alt="img2" />
+				<div class="content__item-inner">
+					<h2>HIPER-SCANNER</h2>
+					<h3>Compra desde la camara de tu celular</h3>
+					<p>Se habilitara la camara de tu dispositivo movil y podras scanear los codigos
+						que apareceran debajo de los productos en el mostrador, podras añadir todos los productos
+						que decees y al finalizar deberas llenar un formulario para realizar el pago.
+					</p>
+					<p align="center"><a href="#">Empezar compra &xrarr;</a></p>
+				</div>
+			</div>
+			<!-- <div class="content__item" id="content-3">
+				<img class="content__item-img rounded-right" src="images/libros2.png" alt="MacBook Content" />
+				<div class="content__item-inner">
+					<h2>The MacBook</h2>
+					<h3>It's the future of the notebook</h3>
+					<p>With the new MacBook, we set out to do the impossible: engineer a full-size experience into the lightest and most compact Mac notebook ever. That meant reimagining every element to make it not only lighter and thinner but also better. The result is more than just a new notebook. It's the future of the notebook.</p>
+					<p><a href="https://www.apple.com/macbook/design/">Learn more about the design &xrarr;</a></p>
+				</div>
+			</div>
+			<div class="content__item" id="content-4">
+				<img class="content__item-img rounded-right" src="images/libros3.png" alt="iMac Content" />
+				<div class="content__item-inner">
+					<h2>The iMac</h2>
+					<h3>Engineered to the very last detail</h3>
+					<p>Every new Mac comes with Photos, iMovie, GarageBand, Pages, Numbers, and Keynote. So you can be creative with your photos, videos, music, documents, spreadsheets, and presentations right from the start. You also get great apps for email, surfing the web, sending texts, and making FaceTime calls — there’s even an app for finding new apps.</p>
+					<p><a href="https://www.apple.com/imac/built-in-apps/">Learn more about the iMac's features &xrarr;</a></p>
+				</div>
+			</div>
+			<div class="content__item" id="content-5">
+				<img class="content__item-img rounded-right" src="images/apple-watch-content.png" alt="Apple Watch Content" />
+				<div class="content__item-inner">
+					<h2>The Apple Watch</h2>
+					<h3>Entirely new ways to stay in touch</h3>
+					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat. </p>
+					<p><a href="https://www.apple.com/watch/new-ways-to-connect/">Learn more about new ways to connect &xrarr;</a></p>
+				</div>
+			</div> -->
+			<button class="button button--close"><i class="icon icon--circle-cross"></i><span class="text-hidden">Close content</span></button>
+		</section>
+	</div>
+	<script src="js/classie.js"></script>
+	<script src="js/dynamics.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
