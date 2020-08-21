@@ -164,7 +164,7 @@
 }
 
 .action--button {
-	background: #2C2D34;
+	background: #3c3d3b1a;
 	color: #fff;
 	border-radius: 2px;
 	-webkit-transition: background 0.2s;
@@ -293,14 +293,14 @@
 	color: #ddd;
 	font-size: 75%;
 	letter-spacing: 0;
-	background: #1f242c;
+	background: #1f242c70;
 	border-radius: 2px;
 	padding: 3px 5px;
 }
 
 .action--remove:hover,
 .action--compare-add:hover {
-	color: #1c94b3;
+	color: #ffffff;
 }
 
 .action--compare-add .fa-check,
@@ -310,7 +310,7 @@
 
 .action--compare-add input[type=checkbox]:checked ~ .fa-check {
 	display: block;
-	color: #1c94b3;
+	color: #1c95b39d;
 }
 
 .check-hidden {

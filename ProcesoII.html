@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="images/ico/icono.png">
+    <title>DIMIM</title>
+    <link rel="stylesheet" href="css/cart.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            background-color: #1f242c;
+            color: #e9e9e9;
+        }
+        video, img {
+        max-width:100%;
+        }
+    </style>
+
+</head>
+<body>
+<div id="wrap">
+  <div id="product_layout_3">
+    <div class="product_image">
+      <div class="main_image">
+        <video autoplay></video>
+      </div>
+    </div>
+    <div class="product_desc">
+      <h1 align="center">Producto QR</h1>
+      <span class="price">$75</span>
+      <span class="sale_price">$50</span>
+      <span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i></span>
+      <div class="product_options">
+        <div class="select">
+                 <select id="size">
+                   <option value = "1">Pequeño</option>
+                   <option value = "2">Mediano</option>
+                   <option value = "3">Largo</option>
+                   <option value = "4">Grande</option>
+                 </select>
+                 </div>
+          </div>
+          <div class="buying">
+                 <div class="quantity">
+                   <label for="quantity">CANT:</label>
+                   <input type="text">
+                 </div>
+                 <div class="cart">
+                   <a href="#" class="add">Añadir <i class="fa fa-shopping-cart fa-lg"></i></a>
+                 </div>
+          </div>
+          <div class="other_options">
+          <span class="SKU">SKU:12345</span>
+          <span class="QTY">QTY:35</span>
+          </div>
+          <div class="description">
+            <p>El producto que usted scaneeo es una Fruta (Manzana) Si usted decea comprar mas de una manzana escribe la cantidad que decee para poder alistar su compras.</P>
+            <p>La Manzana que usted eligio fue traida del municipio de Vinto, fue escogida cuidadosamente por nuestros encargados en producción, tenga la total seguridad que este producto fue traido de buenas manos para el consumo en el hogar.</p>
+        </div>
+        <div class="buying">
+            <div class="cart">
+              <a href="index.html" class="add">Volver</a>
+            </div>
+     </div>
+      </div>
+      <div class="tabular">
+          
+<script>
+    (function() {
+      'use strict';
+      var video = document.querySelector('video')
+        , canvas;
+  
+      /**
+       *  generates a still frame image from the stream in the <video>
+       *  appends the image to the <body>
+       */
+      function takeSnapshot() {
+        var img = document.querySelector('img') || document.createElement('img');
+        var context;
+        var width = video.offsetWidth
+          , height = video.offsetHeight;
+  
+        canvas = canvas || document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+  
+        context = canvas.getContext('2d');
+        context.drawImage(video, 0, 0, width, height);
+  
+        img.src = canvas.toDataURL('image/png');
+        document.body.appendChild(img);
+      }
+  
+      // use MediaDevices API
+      // docs: https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
+      if (navigator.mediaDevices) {
+        // access the web cam
+        navigator.mediaDevices.getUserMedia({video: { mediaSource: 'screen' }})
+        // permission granted:
+          .then(function(stream) {
+            video.srcObject = stream
+            video.addEventListener('click', takeSnapshot);
+          })
+          // permission denied:
+          .catch(function(error) {
+            document.body.textContent = 'Could not access the camera. Error: ' + error.name;
+          });
+      }
+    })();
+  </script>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+    (function($) {
+
+        var tabs =  $(".tabs li a");
+      
+        tabs.click(function() {
+            var content = this.hash.replace('/','');
+            tabs.removeClass("active");
+            $(this).addClass("active");
+        $("#content > aside").hide();
+        $(content).fadeIn(200);
+        });
+    
+    })(jQuery);
+  </script>
+</body>
+</html>
