@@ -50,8 +50,8 @@ html {
 /* Main styles */
 body {
 	font-family: "Avenir", 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
-	color: #e2e2e2;
-	background: #1f242c;
+	color: #1f242c;
+	background: #e2e2e2;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
